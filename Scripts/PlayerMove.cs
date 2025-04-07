@@ -8,7 +8,6 @@ public class PlayerMove : MonoBehaviour
 
     private Vector2 _startDragPos;
     private Vector2 _endDragPos;
-    public Vector2 force;
     private Rigidbody2D _rb2D;
     public bool isDragging = false;
     public bool canJump = true; // Можно ли прыгать
@@ -65,9 +64,9 @@ public class PlayerMove : MonoBehaviour
         }
     }
 
-    public void Jump()
+    void Jump()
     {
-        /*Vector2 */ force = (_startDragPos - _endDragPos) * maxForce;
+        Vector2 force = (_startDragPos - _endDragPos) * maxForce;
         _rb2D.velocity = Vector2.zero; 
         _rb2D.AddForce(force, ForceMode2D.Impulse);
         canJump = false; 

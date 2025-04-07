@@ -646,7 +646,6 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
-  force: {x: 0, y: 0}
   isDragging: 0
   canJump: 1
 --- !u!114 &173138546
@@ -663,6 +662,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   defaultSlimeMaterial: {fileID: 6200000, guid: 88b3fbf96d40e7c4e8d1af4fd724ab97, type: 2}
   ironSlimeMaterial: {fileID: 6200000, guid: d40b473b89ac84f428304a0213523889, type: 2}
+  fireSlimeMaterial: {fileID: 6200000, guid: d468a20d16fe18e499f16cffa70e7254, type: 2}
+  iceSlimeMaterial: {fileID: 6200000, guid: b39fc724d0b956d4e833025b468ef7cd, type: 2}
 --- !u!114 &173138547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1073,8 +1074,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 79.68445, y: -66.68445}
-  m_SizeDelta: {x: 67.369, y: 67.369}
+  m_AnchoredPosition: {x: 151.1119, y: -56.6566}
+  m_SizeDelta: {x: 210.2235, y: 47.3131}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &480673164
 MonoBehaviour:
