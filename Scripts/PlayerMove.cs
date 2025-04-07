@@ -9,7 +9,7 @@ public class PlayerMove : MonoBehaviour
     private Vector2 _startDragPos;
     private Vector2 _endDragPos;
     private Rigidbody2D _rb2D;
-    public bool isDragging = false;
+    public bool isDragging;
     public bool canJump = true; // Можно ли прыгать
     
 

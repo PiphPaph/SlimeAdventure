@@ -1881,6 +1881,7 @@ GameObject:
   - component: {fileID: 1679889072}
   - component: {fileID: 1679889071}
   - component: {fileID: 1679889074}
+  - component: {fileID: 1679889075}
   m_Layer: 7
   m_Name: WaterLine
   m_TagString: Untagged
@@ -1978,6 +1979,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74bb602749969c54f85419dae55d2012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1679889075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679889070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad28b6c2fd21844294f3db5c21a76f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1857287219
