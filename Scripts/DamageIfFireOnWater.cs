@@ -38,6 +38,10 @@ public class DamageIfFireOnWater : MonoBehaviour
         while (true)
         {
             _healthBar.health -= damage;
+            if (_healthBar.health <= 0)
+            {
+                PlayerRespawn.Instance.Respawn();
+            }
             Debug.Log("🔥 Урон от воды: " + _healthBar.health);
             yield return new WaitForSeconds(0.5f);
         }

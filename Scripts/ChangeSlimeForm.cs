@@ -72,4 +72,32 @@ public class ChangeSlimeForm : MonoBehaviour
         _rb2D.mass = 0.5f;
         _rb2D.gravityScale = 1;
     }
+    
+    public string GetCurrentForm()
+    {
+        if (IsIronSlime) return "iron";
+        if (IsFireSlime) return "fire";
+        if (IsIceSlime) return "ice";
+        return "default";
+    }
+
+    public void LoadForm(string form)
+    {
+        switch (form)
+        {
+            case "iron":
+                ApplyIronForm();
+                break;
+            case "fire":
+                ApplyFireForm();
+                break;
+            case "ice":
+                ApplyIceForm();
+                break;
+            default:
+                ApplyDefaultForm();
+                break;
+        }
+    }
+
 }
