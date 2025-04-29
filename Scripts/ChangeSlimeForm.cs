@@ -29,11 +29,12 @@ public class ChangeSlimeForm : MonoBehaviour
     {
         _collider = GetComponent<BoxCollider2D>();
         _rb2D = GetComponent<Rigidbody2D>();
-        InitializeForms();
+        
     }
 
-    void InitializeForms()
+    /*void InitializeForms()
     {
+    /*InitializeForms();* /
         forms = new SlimeForm[]
         {
             new SlimeForm { name = "default", material = defaultSlimeMaterial, mass = 1f },
@@ -41,15 +42,37 @@ public class ChangeSlimeForm : MonoBehaviour
             new SlimeForm { name = "fire", material = fireSlimeMaterial, mass = 0.5f },
             new SlimeForm { name = "ice", material = iceSlimeMaterial, mass = 0.5f }
         };
-    }
+    }*/
 
-    public void AddItem(string formType)
+    /*public void AddItem(string formType)
     {
         foreach (var form in forms)
         {
             if (form.name == formType)
             {
                 form.collectedItems++;
+                uiController.UpdateProgress(formType, form.collectedItems, form.requiredItems);
+                break;
+            }
+        }
+    }*/
+    
+    public void AddItem(string formType)
+    {
+        Debug.Log($"Пытаюсь добавить предмет для формы: {formType}");
+    
+        foreach (var form in forms)
+        {
+            Debug.Log($"Проверяю форму: {form.name}");
+        
+            if (form.name == formType)
+            {
+                Debug.Log($"Форма найдена: {form.name}, собрано предметов ДО добавления: {form.collectedItems}");
+            
+                form.collectedItems++;
+            
+                Debug.Log($"Собрано предметов ПОСЛЕ добавления: {form.collectedItems}");
+            
                 uiController.UpdateProgress(formType, form.collectedItems, form.requiredItems);
                 break;
             }
@@ -66,9 +89,9 @@ public class ChangeSlimeForm : MonoBehaviour
         }
     
         // Остальные формы с проверкой
-        if (Input.GetKeyDown(KeyCode.A)) TryChangeForm("iron");
-        if (Input.GetKeyDown(KeyCode.S)) TryChangeForm("fire");
-        if (Input.GetKeyDown(KeyCode.D)) TryChangeForm("ice");
+        if (Input.GetKeyDown(KeyCode.A)) TryChangeForm("Iron");
+        if (Input.GetKeyDown(KeyCode.S)) TryChangeForm("Fire");
+        if (Input.GetKeyDown(KeyCode.D)) TryChangeForm("Ice");
     }
 
     void TryChangeForm(string formName)
@@ -122,10 +145,10 @@ public class ChangeSlimeForm : MonoBehaviour
     }
 
 // Геттеры для совместимости (оставляем публичными)
-    public bool IsIronSlime => GetCurrentForm() == "iron";
-    public bool IsFireSlime => GetCurrentForm() == "fire";
-    public bool IsIceSlime => GetCurrentForm() == "ice";
-    public bool IsDefaultSlime => GetCurrentForm() == "default";
+    public bool IsIronSlime => GetCurrentForm() == "Iron";
+    public bool IsFireSlime => GetCurrentForm() == "Fire";
+    public bool IsIceSlime => GetCurrentForm() == "Ice";
+    public bool IsDefaultSlime => GetCurrentForm() == "Default";
 }
 
 /*

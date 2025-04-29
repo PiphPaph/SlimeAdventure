@@ -4,12 +4,26 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Image healthBar;
-    public float health = 1f; // 1 = 100%, 0.5 = 50% и т.д.
-    public float maxHealth = 1f; // Можно задать через инспектор
+    public float health = 1f;
+
+    private PlayerRespawn respawn;
+    private bool isDead;
+
+    private void Start()
+    {
+        respawn = GetComponent<PlayerRespawn>();
+    }
 
     void Update()
     {
         healthBar.fillAmount = health;
+
+        if (health <= 0f && !isDead)
+        {
+            isDead = true;
+            if (respawn != null)
+                respawn.Respawn();
+        }
     }
 
     public float GetHealth()
@@ -19,6 +33,7 @@ public class HealthBar : MonoBehaviour
 
     public void SetHealth(float value)
     {
-        health = Mathf.Clamp(value, 0, maxHealth);
+        health = Mathf.Clamp01(value);
+        isDead = false; // сброс флага после восстановления
     }
 }

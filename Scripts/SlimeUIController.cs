@@ -76,10 +76,10 @@ public class SlimeUIController : MonoBehaviour
     {
         return formName switch
         {
-            "default" => 0,
-            "iron" => 1,
-            "fire" => 2,
-            "ice" => 3,
+            "Default" => 0,
+            "Iron" => 1,
+            "Ice" => 2,
+            "Fire" => 3,
             _ => -1
         };
     }
