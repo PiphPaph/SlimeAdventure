@@ -25,7 +25,7 @@ public class AddJumpForce : MonoBehaviour
   {
     if (collision.collider == _playerCollider && _playerMove != null)
     {
-      _playerMove.maxForce += 1;
+      _playerMove.maxForce += 0.5f;
       Destroy(_rabbit);
     }
   }
