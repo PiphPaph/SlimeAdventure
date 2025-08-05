@@ -55,7 +55,16 @@ public class DialogManager : MonoBehaviour
     private void ShowLine(DialogLine line)
     {
         speakerNameText.text = line.speakerName;
-        dialogText.text = line.text;
+        // Проверяем, нужно ли применять DovaFont
+        if (line.useDovahFont) // или любая другая проверка
+        {
+            string translated = DovahTransliterator.Transliterate(line.text);
+            dialogText.text = $"<font=\"DovaFont\">{translated}</font>";
+        }
+        else
+        {
+            dialogText.text = line.text;
+        }
 
         if (line.portrait != null)
         {

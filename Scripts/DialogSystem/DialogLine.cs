@@ -7,4 +7,5 @@ public class DialogLine
     [TextArea(2, 5)]
     public string text;
     public Sprite portrait;
+    public bool useDovahFont;
 }
