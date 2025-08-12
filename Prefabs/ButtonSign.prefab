@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 1550249434161860927}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.481, y: -25.16, z: 110.22836}
+  m_LocalPosition: {x: 0, y: 0, z: 110.22836}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -102,9 +102,11 @@ MonoBehaviour:
   - speakerName: speaker
     text: sdfsdfsdf322
     portrait: {fileID: 0}
+    useDovahFont: 0
   - speakerName: slime
     text: 4343sdfsdf
     portrait: {fileID: 0}
+    useDovahFont: 0
   autoTrigger: 0
   interactionPromptPrefab: {fileID: 8425900252488687598, guid: 897ff4261cd3ff74cadbed922a6f5090, type: 3}
 --- !u!61 &3850847497713509396
