@@ -46,7 +46,7 @@ public class SpikeTrap : MonoBehaviour
         filter.useTriggers = false;
 
         List<Collider2D> results = new List<Collider2D>();
-        trapCollider.OverlapCollider(filter, results);
+        trapCollider.Overlap(filter, results);
 
         foreach (Collider2D col in results)
         {

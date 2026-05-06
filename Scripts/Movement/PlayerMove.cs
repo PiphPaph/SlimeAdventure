@@ -67,7 +67,7 @@ public class PlayerMove : MonoBehaviour
     void Jump()
     {
         Vector2 force = (_startDragPos - _endDragPos) * maxForce;
-        _rb2D.velocity = Vector2.zero; 
+        _rb2D.linearVelocity = Vector2.zero; 
         _rb2D.AddForce(force, ForceMode2D.Impulse);
         canJump = false; 
     }

@@ -14,7 +14,7 @@ public class BouncePlatform : MonoBehaviour
             if (rb != null)
             {
                 Vector2 force = bounceDirection.normalized * bounceForce;
-                rb.velocity = Vector2.zero; // сброс перед толчком
+                rb.linearVelocity = Vector2.zero; // сброс перед толчком
                 rb.AddForce(force, ForceMode2D.Impulse);
             }
         }

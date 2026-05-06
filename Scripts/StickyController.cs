@@ -57,7 +57,7 @@ public class StickyController : MonoBehaviour
         _rb.AddForce(correctionForce);
 
         // 2. Проверка на отрыв
-        if (_rb.velocity.magnitude > breakVelocity)
+        if (_rb.linearVelocity.magnitude > breakVelocity)
         {
             Unstick();
         }
