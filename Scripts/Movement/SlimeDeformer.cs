@@ -166,7 +166,7 @@ public class JellyDeformer : MonoBehaviour
     // 🔴 ВОТ ОН. ЕГО НУЖНО ДОБАВИТЬ
     public void ApplyImpact(Vector2 force)
     {
-        Debug.Log("Impact received: " + force);
+        //Debug.Log("Impact received: " + force);
         velocity += force;
 
         jitterTimer = Mathf.Clamp(jitterTimer + force.magnitude * 0.5f, 0f, 1f);

@@ -17,7 +17,7 @@ public class LevelGenerator : MonoBehaviour
 
     void Start()
     {
-        Random.InitState(seed);
+        seed = Random.Range(int.MinValue, int.MaxValue);
         Generate();
     }
 
@@ -25,11 +25,11 @@ public class LevelGenerator : MonoBehaviour
     {
         foreach (Transform point in room.trapPoints)
         {
-            if (Random.value < 0.5f)
-            {
+            /*if (Random.value < 0.5f)
+            {*/
                 GameObject trap = trapPrefabs[Random.Range(0, trapPrefabs.Count)];
                 Instantiate(trap, point.position, Quaternion.identity, parent);
-            }
+            //}
         }
     }
 
